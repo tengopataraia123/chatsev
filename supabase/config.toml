@@ -1,0 +1,49 @@
+project_id = "vubvqjqhfnalqjocgvae"
+
+[functions.admin-statistics]
+verify_jwt = false
+
+[functions.file-control]
+verify_jwt = false
+
+[functions.auto-dj]
+verify_jwt = false
+
+[functions.quiz-v2]
+verify_jwt = false
+
+[functions.cloud-storage-manager]
+verify_jwt = false
+
+[functions.storage-cleanup]
+verify_jwt = false
+
+[functions.ai-chat]
+verify_jwt = false
+
+[functions.dj-youtube]
+verify_jwt = false
+
+[functions.get-client-ip]
+verify_jwt = false
+
+[functions.geolocate-ip]
+verify_jwt = false
+
+[functions.football-predictions]
+verify_jwt = false
+
+[functions.generate-avatar]
+verify_jwt = false
+
+[functions.totalizator-engine]
+verify_jwt = false
+
+[functions.fm-daily-matches]
+verify_jwt = false
+
+[functions.generate-player-avatar]
+verify_jwt = false
+
+[functions.send-push-notification]
+verify_jwt = false

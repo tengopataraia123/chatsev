@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>ChatSev - გაცნობა | ქართული გაცნობის საიტი</title>
+    <meta name="description" content="ChatSev - ქართული გაცნობის საიტი. გაიცანი ახალი ადამიანები, იპოვე მეგობრები და შეყვარებული. უფასო ონლაინ გაცნობა საქართველოში." />
+    <meta name="author" content="ChatSev" />
+    <meta name="keywords" content="გაცნობა, გაცნობის საიტი, gacnoba, gacnobis saiti, ჩატი, chati, გართობა, gartoba, ონლაინ გაცნობა, ChatSev, ჩატსევი, ქართული გაცნობა, ქართული სოციალური ქსელი, Georgian social network, გაცნობა ონლაინ, შეხვედრა, მეგობრობა, საქართველო" />
+    <link rel="canonical" href="https://chatsev.com" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://chatsev.com" />
+    <meta property="og:title" content="ChatSev - გაცნობა | ქართული გაცნობის საიტი" />
+    <meta property="og:description" content="გაიცანი ახალი ადამიანები ონლაინ. ქართული გაცნობის საიტი - უფასო ჩატი, მეგობრობა და შეხვედრები." />
+    <meta property="og:image" content="https://chatsev.com/pwa-512x512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:locale" content="ka_GE" />
+    <meta property="og:site_name" content="ChatSev" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ChatSev - გაცნობა | ქართული გაცნობის საიტი" />
+    <meta name="twitter:description" content="გაიცანი ახალი ადამიანები ონლაინ. ქართული გაცნობის საიტი - უფასო ჩატი, მეგობრობა და შეხვედრები." />
+    <meta name="twitter:image" content="https://chatsev.com/pwa-512x512.png" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ChatSev",
+      "alternateName": ["ჩატსევი", "გაცნობა", "გაცნობის საიტი"],
+      "url": "https://chatsev.com",
+      "description": "ქართული გაცნობის საიტი - გაცნობა, ჩატი, მეგობრობა, შეხვედრები ონლაინ",
+      "inLanguage": "ka",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://chatsev.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ChatSev",
+      "url": "https://chatsev.com",
+      "logo": "https://chatsev.com/pwa-512x512.png",
+      "sameAs": []
+    }
+    </script>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#8B5CF6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="ChatSev" />
+    <link rel="apple-touch-icon" href="/pwa-192x192.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    
+    <!-- DNS Prefetch for faster resource loading -->
+    <link rel="dns-prefetch" href="https://vubvqjqhfnalqjocgvae.supabase.co">
+    <link rel="dns-prefetch" href="https://counter.top.ge">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
+    <!-- Preconnect to critical origins for faster FCP/LCP -->
+    <link rel="preconnect" href="https://vubvqjqhfnalqjocgvae.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- System fonts only - no Google Fonts for fastest LCP -->
+    <style>
+      /* Inline critical CSS for fastest LCP */
+      :root {
+        --bg-color: #0f0f0f;
+        --text-color: #fafafa;
+        --primary-color: #8B5CF6;
+      }
+      html { 
+        background-color: var(--bg-color);
+        color-scheme: dark;
+      }
+      body { 
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      #root { 
+        min-height: 100vh;
+        min-height: 100dvh;
+        contain: layout style;
+        text-rendering: optimizeSpeed;
+      }
+      /* Isolate layout for main content */
+      main {
+        contain: layout style;
+      }
+      /* Optimized touch behavior */
+      * {
+        -webkit-tap-highlight-color: transparent;
+      }
+      /* iOS-only: disable elastic bounce without killing Android pull-to-refresh */
+      @supports (-webkit-touch-callout: none) {
+        html, body {
+          overscroll-behavior-y: none;
+        }
+      }
+      /* Critical spinner animation */
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      /* Prevent layout shift from images */
+      img, video { 
+        content-visibility: auto;
+        contain-intrinsic-size: 300px 200px;
+      }
+      /* Skeleton shimmer for loading states */
+      @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+      .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script>
+      // iOS-only edge-lock: prevent bounce on overscroll edges
+      // Android is NOT affected — native pull-to-refresh stays intact
+      (function(){
+        var ua=navigator.userAgent;
+        var isIOS=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+        if(!isIOS)return;
+        var scroller=document.scrollingElement||document.documentElement;
+        var startY=0;
+        document.addEventListener('touchstart',function(e){startY=e.touches[0].clientY},{passive:true});
+        document.addEventListener('touchmove',function(e){
+          // Skip if touch is inside a scrollable child
+          var el=e.target;
+          while(el&&el!==document.body&&el!==document.documentElement){
+            var s=getComputedStyle(el);
+            if((s.overflowY==='auto'||s.overflowY==='scroll')&&el.scrollHeight>el.clientHeight)return;
+            el=el.parentElement;
+          }
+          var y=e.touches[0].clientY;var dy=y-startY;
+          var atTop=scroller.scrollTop<=0;
+          var atBottom=scroller.scrollTop+window.innerHeight>=scroller.scrollHeight-1;
+          // Only block bottom bounce on iOS; top pull is allowed for consistency
+          if(atBottom&&dy<0)e.preventDefault();
+        },{passive:false});
+      })();
+    </script>
+    <script>
+      // Emergency SW cleanup - runs before app loads
+      (function() {
+        var APP_VERSION = '20260201_001';
+        var STORAGE_KEY = 'chatsev_sw_version';
+        
+        try {
+          var storedVersion = localStorage.getItem(STORAGE_KEY);
+          
+          // If version mismatch or first load, cleanup old SW
+          if (storedVersion !== APP_VERSION) {
+            console.log('[SW Cleanup] Version mismatch, clearing caches...');
+            
+            // Unregister all service workers
+            if ('serviceWorker' in navigator) {
+              navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                registrations.forEach(function(registration) {
+                  registration.unregister();
+                  console.log('[SW Cleanup] Unregistered SW');
+                });
+              });
+            }
+            
+            // Clear all caches
+            if ('caches' in window) {
+              caches.keys().then(function(names) {
+                names.forEach(function(name) {
+                  caches.delete(name);
+                  console.log('[SW Cleanup] Deleted cache:', name);
+                });
+              });
+            }
+            
+            // Store new version
+            localStorage.setItem(STORAGE_KEY, APP_VERSION);
+          }
+        } catch(e) {
+          console.warn('[SW Cleanup] Error:', e);
+        }
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

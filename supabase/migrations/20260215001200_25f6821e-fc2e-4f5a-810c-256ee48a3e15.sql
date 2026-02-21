@@ -1,0 +1,1 @@
+ALTER TABLE public.stories ADD COLUMN IF NOT EXISTS music_deezer_id TEXT;
