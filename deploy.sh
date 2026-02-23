@@ -17,8 +17,8 @@ done
 
 # Copy only updated edge functions
 docker exec supabase-edge-functions sh -c "mkdir -p /home/deno/functions"
-rsync -av --update supabase/functions/ supabase-edge-functions:/home/deno/functions/ || \
-    docker cp supabase/functions/. supabase-edge-functions:/home/deno/functions/
+rsync -av --update /home/chatsev/supabase/functions/ supabase-edge-functions:/home/deno/functions/ || \
+    docker cp /home/chatsev/supabase/functions/. supabase-edge-functions:/home/deno/functions/
 
 # Restart edge functions container
 docker restart supabase-edge-functions
