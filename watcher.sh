@@ -10,31 +10,27 @@ cd /root/chatsev
 LAST_HASH=""
 
 while true; do
-  echo "[$(date)] Fetching latest changes..."
-  # Fetch remote changes
-  git fetch origin main
+    echo "[$(date)] Fetching latest changes..."
+    # Fetch remote changes
+    git fetch origin main
 
-LOCAL=$(git rev-parse "$BRANCH")
+    LOCAL=$(git rev-parse "$BRANCH")
     REMOTE=$(git rev-parse "origin/$BRANCH")
 
     if [ "$LOCAL" = "$REMOTE" ]; then
         echo "[Updater] No new changes."
-    # Ensure on main
-    git checkout main
+    else
+        # Ensure on main
+        git checkout main
 
-    # Pull changes
-    git pull origin main
+        # Pull changes
+        git pull origin main
 
-    # Rebuild your project (replace with your build command)
-    echo "[$(date)] Rebuilding project..."
+        # Rebuild your project (replace with your build command)
+        echo "[$(date)] Rebuilding project..."
 
-    /root/deploy.sh
-
-    # Update last hash
-    LAST_HASH="$REMOTE_HASH"
-  else
-    echo "[$(date)] No changes detected."
-  fi
+        /root/deploy.sh
+    fi
 
   # Wait 20 seconds before next check
   sleep 20
