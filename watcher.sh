@@ -29,7 +29,7 @@ while true; do
         # Rebuild your project (replace with your build command)
         echo "[$(date)] Rebuilding project..."
 
-        /root/deploy.sh
+        /root/chatsev/deploy.sh
     fi
 
   # Wait 20 seconds before next check
