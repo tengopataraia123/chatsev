@@ -53,7 +53,15 @@ END;
 $$;
 
 -- Update the cron job to use the new function
-SELECT cron.unschedule('delete-expired-stories');
+-- Remove existing job only if it exists
+DO $$
+BEGIN
+  PERFORM cron.unschedule('delete-expired-stories');
+EXCEPTION WHEN undefined_object THEN
+  NULL;
+END $$;
+
+-- Schedule the cron job
 SELECT cron.schedule(
   'delete-expired-stories',
   '0 * * * *',
