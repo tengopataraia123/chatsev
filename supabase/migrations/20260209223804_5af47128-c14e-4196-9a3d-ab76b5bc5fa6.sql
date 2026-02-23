@@ -1,6 +1,14 @@
 
 -- Create storage bucket for group assets (avatars and covers)
-INSERT INTO storage.buckets (id, name, public) VALUES ('group-assets', 'group-assets', true);
+INSERT INTO storage.buckets (id, name, public) 
+VALUES ('group-assets', 'group-assets', true)
+ON CONFLICT (id) DO NOTHING;
+
+-- Drop existing policies if they exist
+DROP POLICY IF EXISTS "Group assets are publicly accessible" ON storage.objects;
+DROP POLICY IF EXISTS "Group owners can upload assets" ON storage.objects;
+DROP POLICY IF EXISTS "Group owners can update assets" ON storage.objects;
+DROP POLICY IF EXISTS "Group owners can delete assets" ON storage.objects;
 
 -- Allow anyone to view group assets
 CREATE POLICY "Group assets are publicly accessible"
