@@ -57,7 +57,7 @@ $$;
 DO $$
 BEGIN
   PERFORM cron.unschedule('delete-expired-stories');
-EXCEPTION WHEN undefined_object THEN
+EXCEPTION WHEN OTHERS THEN
   NULL;
 END $$;
 
