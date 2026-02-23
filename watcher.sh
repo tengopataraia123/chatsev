@@ -7,7 +7,7 @@ set -e
 cd /root/chatsev
 
 # Remember last commit hash
-LAST_HASH=""
+BRANCH="main"
 
 while true; do
     echo "[$(date)] Fetching latest changes..."
