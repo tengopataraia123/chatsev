@@ -4,7 +4,7 @@
 set -e
 
 # Path to your repository
-cd /root/chatsev
+cd /var/www/chatsev
 
 # Remember last commit hash
 BRANCH="main"
@@ -29,7 +29,7 @@ while true; do
         # Rebuild your project (replace with your build command)
         echo "[$(date)] Rebuilding project..."
 
-        /root/chatsev/deploy.sh
+        /var/www/chatsev/deploy.sh
     fi
 
   # Wait 20 seconds before next check

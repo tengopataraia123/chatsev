@@ -2,7 +2,7 @@
 
 set -e
 
-cd /root/chatsev
+cd /var/www/chatsev
 
 supabase migration up
 
