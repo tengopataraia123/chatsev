@@ -2,7 +2,7 @@
 
 set -e
 
-cd /home/chatsev
+cd /root/chatsev
 
 supabase db push
 
