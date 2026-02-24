@@ -4,7 +4,7 @@ set -e
 
 cd /root/chatsev
 
-supabase migration updf
+supabase migration up
 
 # Restart edge functions container
 docker restart supabase-edge-functions
