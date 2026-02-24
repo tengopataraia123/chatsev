@@ -4,8 +4,7 @@ set -e
 
 cd /root/chatsev
 
-supabase stop
-supabase start
+supabase migration up
 
 bun install
 bun run build
