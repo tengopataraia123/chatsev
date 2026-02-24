@@ -4,10 +4,8 @@ set -e
 
 cd /root/chatsev
 
-supabase migration up
-
-# Restart edge functions container
-docker restart supabase-edge-functions
+supabase stop
+supabase start
 
 bun install
 bun run build
